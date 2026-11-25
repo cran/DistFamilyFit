@@ -1,0 +1,25 @@
+(function() {
+  oldpar <- par(no.readonly = TRUE)
+  on.exit({
+    par(oldpar)
+    par(mfg = oldpar$mfg, new = oldpar$new)
+  }, add = TRUE)
+# Demonstration of the main DistFamilyFit workflow.
+# Run with: source(system.file("examples", "demo.R", package = "DistFamilyFit"))
+library(DistFamilyFit)
+path <- system.file("extdata", "input_template.csv", package = "DistFamilyFit")
+prepared <- read_fit_data(path, columns = c("variable_1", "variable_2", "variable_3"))
+u <- fit_univariate(prepare_fit_data(prepared, columns = "variable_1"))
+print(u)
+comparison <- fit_univariate(prepared$data$variable_1, families = "all")
+separate <- fit_columns(prepared, families = "Johnson")
+m <- fit_johnson_multivariate(prepared)
+print(m)
+plot_fit(u, "cdf")
+plot_fit(u, "qq")
+plot_fit(u, "density")
+plot_comparison(comparison)
+plot_dependence(m)
+plot_transformed(m, "mahalanobis")
+
+})()

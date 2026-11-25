@@ -1,0 +1,25 @@
+bibentry(
+  bibtype = "InProceedings",
+  header = "To cite the methodology implemented in DistFamilyFit, please use:",
+  title = "Modeling Mobile Application Usage with Distribution Families",
+  author = c(
+    person("Şule Şevval", "Karakaya Demir", email = "sule.karakaya@metu.edu.tr", comment = c(ORCID = "0000-0003-1851-4109")),
+    person("Vilda", "Purutçuoğlu", email = "vpurutucu@metu.edu.tr", comment = c(ORCID = "0000-0002-0757-0837")),
+    person("Ahmet", "Bursalı", email = "ahmet.bursali@huawei.com", comment = c(ORCID = "0000-0001-7050-769X"))),
+  booktitle = "2026 3rd International Conference on Advanced Technology in Electronic and Electrical Engineering (ICATEEE)",
+  address = "Hammamet, Tunisia",
+  year = "2026",
+  note = "Accepted for publication"
+)
+
+bibentry(
+  bibtype = "Manual",
+  header = "To cite the software, please use:",
+  title = "{DistFamilyFit}: Fitting and Comparing Flexible Continuous Distribution Families",
+  author = c(
+    person("Şule Şevval", "Karakaya Demir", email = "sule.karakaya@metu.edu.tr", comment = c(ORCID = "0000-0003-1851-4109")),
+    person("Vilda", "Purutçuoğlu", email = "vpurutucu@metu.edu.tr", comment = c(ORCID = "0000-0002-0757-0837")),
+    person("Ahmet", "Bursalı", email = "ahmet.bursali@huawei.com", comment = c(ORCID = "0000-0001-7050-769X"))),
+  year = "2026",
+  note = paste("R package version", meta$Version)
+)
